@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import Analytics from "../components/Analytics";
+
 const About = () => {
   return (
     <>
@@ -13,12 +16,12 @@ const About = () => {
               sapiente ipsam error quidem velit inventore nulla.
             </p>
             <div className="btn btn-group">
-              <a href="/contact">
+              <NavLink to="/contact">
                 <button className="btn">Connect now</button>
-              </a>
-              <a href="/services">
+              </NavLink>
+              <NavLink to="/services">
                 <button className="btn secondary-btn">Learn more</button>
-              </a>
+              </NavLink>
             </div>
           </div>
           {/* hero image  */}
@@ -32,6 +35,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Analytics />
     </>
   );
 };

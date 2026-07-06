@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import Analytics from "../components/Analytics";
+
 const Home = () => {
   return (
     <>
@@ -14,12 +17,12 @@ const Home = () => {
                 earum sapiente ipsam error quidem velit inventore nulla.
               </p>
               <div className="btn btn-group">
-                <a href="/contact">
+                <NavLink to="/contact">
                   <button className="btn">Connect now</button>
-                </a>
-                <a href="/services">
+                </NavLink>
+                <NavLink to="/services">
                   <button className="btn secondary-btn">Learn more</button>
-                </a>
+                </NavLink>
               </div>
             </div>
             {/* hero image  */}
@@ -34,28 +37,7 @@ const Home = () => {
           </div>
         </section>
       </main>
-
-      <section className="section-analytics">
-        <div className="container grid grid-four-cols">
-          <div className="div1">
-            <h2>50+</h2>
-            <p>registered companies</p>
-          </div>
-          <div className="div1">
-            <h2>100,000+</h2>
-            <p>Happy Clients</p>
-          </div>
-          <div className="div1">
-            <h2>500+</h2>
-            <p>Well Known Developers</p>
-          </div>
-          <div className="div1">
-            <h2>24/7</h2>
-            <p>Service</p>
-          </div>
-        </div>
-      </section>
-
+      <Analytics />
       <section className="section-hero">
         <div className="container grid grid-two-cols">
           {/* hero image  */}
@@ -70,19 +52,19 @@ const Home = () => {
           <div className="hero-content">
             <p>We are here to help you</p>
             <h1>Get Started</h1>
-            <p>
+            <p className="">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
               pariatur ipsum voluptates iste, dolorum omnis! Voluptas eos,
               exercitationem optio architecto totam aperiam non quaerat earum
               sapiente ipsam error quidem velit inventore nulla.
             </p>
             <div className="btn btn-group">
-              <a href="/contact">
+              <NavLink href="/contact">
                 <button className="btn">Connect now</button>
-              </a>
-              <a href="/services">
+              </NavLink>
+              <NavLink href="/services">
                 <button className="btn secondary-btn">Learn more</button>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
