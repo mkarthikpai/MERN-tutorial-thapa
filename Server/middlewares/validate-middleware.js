@@ -7,7 +7,11 @@ const validate = (schema) => async (req, res, next) => {
     const status = 422;
     // console.log(err);
     const message = "Fill the input properly";
-    const extraDetails = err.errors[0].message;
+    // const extraDetails = err.errors[0].message;
+    const extraDetails =
+      err.issues?.[0]?.message ||
+      err.errors?.[0]?.message ||
+      "Validation failed";
     const error = { status, message, extraDetails };
     // res.status(400).json({ msg: message });
     next(error);
