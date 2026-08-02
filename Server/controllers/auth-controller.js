@@ -66,4 +66,15 @@ const login = async (req, res, next) => {
   }
 };
 
-module.exports = { home, register, login };
+// To send user data
+const user = async (req, res) => {
+  try {
+    const userData = req.user;
+    console.log(userData);
+    return res.status(200).json({ userData });
+  } catch (error) {
+    console.log(`Error form user route ${error}`);
+  }
+};
+
+module.exports = { home, register, login, user };
