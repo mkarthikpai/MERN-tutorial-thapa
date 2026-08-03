@@ -1,13 +1,19 @@
 import { NavLink } from "react-router-dom";
 import Analytics from "../components/Analytics";
+import { useAuth } from "../store/auth";
 
 const About = () => {
+  const { user } = useAuth();
+
   return (
     <>
       <section className="section-hero">
         <div className="container grid grid-two-cols">
           <div className="hero-content">
-            <p>Welcome, Karthik</p>
+            <p>
+              Welcome,{" "}
+              {user ? `${user.username} to our website` : "to our website"}
+            </p>
             <h1>Why choose us ?</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
