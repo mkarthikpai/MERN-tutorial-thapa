@@ -67,8 +67,12 @@ li {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .grid-four-cols {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 button {
@@ -303,6 +307,28 @@ a:active {
     & button {
       margin-top: 3.2rem;
       margin-bottom: 2rem;
+    }
+  }
+}
+
+.services-grid {
+  display: grid !important;
+  gap: 1.2rem;
+}
+
+.card {
+  border: 1px solid var(--helper-color);
+  padding: 10px;
+
+  .card-details {
+    div > p {
+      font-size: 1.4rem;
+    }
+
+    .card-description {
+      font-size: 1.1rem;
+      display: flex;
+      text-align: justify;
     }
   }
 }
