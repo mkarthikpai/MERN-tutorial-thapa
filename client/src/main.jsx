@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
-        closeOnClick
+        closeOnClick={false}
         rtl={false}
         pauseOnFocusLoss
         draggable
