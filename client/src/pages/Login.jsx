@@ -31,13 +31,15 @@ const Login = () => {
         body: JSON.stringify(user),
       });
       console.log("Login response", response);
+      const res_data = await response.json();
+
       if (response.ok) {
         alert("Login successful!");
-        const res_data = await response.json();
         storeTokenInLS(res_data.token);
         navigate("/");
         setUser({ email: "", password: "" });
       } else {
+        alert(res_data.extraDetails ? res_data.extraDetails : res_data.message);
         console.log("Invalid credentials");
       }
     } catch (error) {
